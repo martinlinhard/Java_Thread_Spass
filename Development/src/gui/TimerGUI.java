@@ -10,7 +10,7 @@ package gui;
  * @author martin
  */
 public class TimerGUI extends javax.swing.JFrame {
-    
+
     private Thread t;
 
     /**
@@ -65,12 +65,16 @@ public class TimerGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void onStart(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onStart
-        this.t = new Thread((TimerLabel) jLabel1);
-        t.start();
+        if (t == null || t.isAlive()) {
+            this.t = new Thread((TimerLabel) jLabel1);
+            t.start();
+        }
     }//GEN-LAST:event_onStart
 
     private void onStop(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onStop
-        t.interrupt();
+        if (t != null) {
+            t.interrupt();
+        }
     }//GEN-LAST:event_onStop
 
     /**
