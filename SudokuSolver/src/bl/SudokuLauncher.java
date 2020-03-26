@@ -41,6 +41,6 @@ public class SudokuLauncher {
 			}
 		}
 
-		System.out.println("Solution --> " + resultSum);
+		System.out.println("The sum is " + resultSum);
 	}
 }
