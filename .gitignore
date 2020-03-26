@@ -5,3 +5,4 @@ build/
 /XORDecryption/nbproject/private/
 /SudokuSolver/nbproject/private/
 /SudokuSolver/dist/
+*.zip
